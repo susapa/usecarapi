@@ -1,0 +1,15 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020", 
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist", // โฟลเดอร์สำหรับไฟล์ JS ที่คอมไพล์แล้ว
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"], // บอกให้คอมไพล์ไฟล์ในโฟลเดอร์ src
+  "exclude": ["node_modules"]
+}
