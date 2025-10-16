@@ -1,12 +1,11 @@
 // src/routes/userRoutes.ts
 import { Router } from 'express';
-import * as userController from '../controllers/userController';
-// import { protect } from '../middleware/auth'; // ถ้ามี Middleware
+import * as globalController from '../controllers/globalController';
+import { protect } from '../middleware/auth';
 
 const router: Router = Router();
 
 // เราอ้างถึงฟังก์ชันใน controller แบบมีประเภทข้อมูลที่กำหนดไว้
-router.get('/d', userController.getAllUsers);
-router.get('/:id', userController.getUserById);
+router.get('/getbrand', protect, globalController.getBrand);
 
 export default router;
